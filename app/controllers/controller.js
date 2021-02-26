@@ -44,11 +44,11 @@ exports.retrieveAllCustomers = (req, res) => {
     try{
         Customer.findAll({attributes: ['id', 'firstname', 'lastname', 'age', 'address']})
         .then(customerInfos => {
-            res.status(200).json({
-                message: "Get all Customers' Infos Successfully!",
-                customers: customerInfos,
-                error: ""
-            });
+            res.status(200).json(
+                
+                customerInfos
+             
+            );
         })
     }catch(error) {
         // log on console
